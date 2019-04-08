@@ -22,6 +22,20 @@ docker push grep 'docker push' *
 docker push jkobie/get-started:part2
 docker run -p 4000:80  jkobie/get-started:part2
 
+https://docs.docker.com/get-started/part3/
+docker swarm init --advertise-addr 192.168.86.81
+docker stack deploy -c docker-compose.yml getstartedlab
+docker service ls
+
+docker stack ls                                            # List stacks or apps
+docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
+docker service ls                 # List running services associated with an app
+docker service ps <service>                  # List tasks associated with an app
+docker inspect <task or container>                   # Inspect task or container
+docker container ls -q                                      # List container IDs
+docker stack rm <appname>                             # Tear down an application
+docker swarm leave --force      # Take down a single node swarm from the manager
+
 
 # Services
 docker stack ls                                            # List stacks or apps
