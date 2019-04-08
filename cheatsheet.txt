@@ -15,6 +15,14 @@ docker tag <image> username/repository:tag  # Tag <image> for upload to registry
 docker push username/repository:tag            # Upload tagged image to registry
 docker run username/repository:tag                   # Run image from a registry
 
+https://docs.docker.com/get-started/part2/
+
+docker tag friendlyhello jkobie/get-started:part2
+docker push grep 'docker push' *
+docker push jkobie/get-started:part2
+docker run -p 4000:80  jkobie/get-started:part2
+
+
 # Services
 docker stack ls                                            # List stacks or apps
 docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
